@@ -1,0 +1,14 @@
+GET http://localhost:3333/courses
+
+###
+
+GET http://localhost:3333/courses/59c17ba4-5349-4ce5-b7f6-8b3792fbf5c5
+
+###
+
+POST http://localhost:3333/courses
+Content-Type: application/json
+
+{
+    "title": "Curso Teste Zod"
+}
