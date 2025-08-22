@@ -15,6 +15,34 @@
       "when": 1755354323433,
       "tag": "0001_high_king_bedlam",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1755736545284,
+      "tag": "0002_workable_gideon",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1755736642555,
+      "tag": "0003_rainy_agent_brand",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1755738712326,
+      "tag": "0004_wonderful_starbolt",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1755739363575,
+      "tag": "0005_flowery_shard",
+      "breakpoints": true
     }
   ]
 }

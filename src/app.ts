@@ -1,9 +1,9 @@
 import fastify from "fastify";
 import { validatorCompiler, serializerCompiler, type ZodTypeProvider, jsonSchemaTransform } from "fastify-type-provider-zod";
 import { fastifySwagger } from '@fastify/swagger'
-import { createCourse } from "./src/routes/create-course.ts";
-import { getCourses } from "./src/routes/get-courses.ts";
-import { getCourseById } from "./src/routes/get-course-by-id.ts";
+import { createCourse } from "./routes/create-course.ts";
+import { getCourses } from "./routes/get-courses.ts";
+import { getCourseById } from "./routes/get-course-by-id.ts";
 import scalarApiReference from '@scalar/fastify-api-reference'
 
 const server = fastify({
@@ -42,7 +42,4 @@ server.register(getCourseById)
 server.register(createCourse)
 
 
-
-server.listen({ port: 3333 }).then(() => { 
-    console.log("Server Port: 3333");
-})
+export {server}
