@@ -2,23 +2,27 @@ import { test, expect } from 'vitest'
 import request from 'supertest'
 import { server } from '../app.ts'
 import { faker } from '@faker-js/faker'
-import { makeLogin } from './factories/make-login.ts'
+import { makeUser } from './factories/make-user.ts'
 
 //Supertest faz as requests http
 
-test("Create a course", async () => {
+test("login", async () => {
     await server.ready()
 
-    const { token } = await makeLogin('manager')
+    const { user, passwordWithoutHash } = await makeUser()
 
     const response = await request(server.server)
-    .post('/courses')
+    .post('/login')
     .set('Content-Type', 'application/json')
-    .set('Authorization', token)
-    .send({ title: faker.lorem.words(4) })
+    .send(
+        {
+            email: user.email,
+            password: passwordWithoutHash 
+        }
+    )
 
-    expect(response.status).toEqual(201)
+    expect(response.status).toEqual(200)
     expect(response.body).toEqual({
-        courseId: expect.any(String),
+       token: expect.any(String),
     })
 })

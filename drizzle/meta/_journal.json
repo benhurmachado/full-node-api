@@ -43,6 +43,34 @@
       "when": 1755739363575,
       "tag": "0005_flowery_shard",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1756252068481,
+      "tag": "0006_regular_rattler",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1756252113780,
+      "tag": "0007_mute_fabian_cortez",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1756252226502,
+      "tag": "0008_famous_doctor_faustus",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1756252432303,
+      "tag": "0009_thick_donald_blake",
+      "breakpoints": true
     }
   ]
 }

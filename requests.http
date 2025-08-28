@@ -1,13 +1,25 @@
 GET http://localhost:3333/courses
-
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmODgyZWM1Mi1jZThjLTQ5YjEtODk4Ni0yYTI5Yzk1N2E0YmMiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc1NjM0NjU2OX0.TTjQxBvoi-QAGnvVPH-ONqwIGGA7Rly0_c3JkMeiF_U
 ###
 
-GET http://localhost:3333/courses/5ded0310-ffa6-4e0d-85f4-9cddbeb56163
+GET http://localhost:3333/courses/262d677a-7b86-4aa2-9cbf-c073c62b4274
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmODgyZWM1Mi1jZThjLTQ5YjEtODk4Ni0yYTI5Yzk1N2E0YmMiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc1NjM0NjU2OX0.TTjQxBvoi-QAGnvVPH-ONqwIGGA7Rly0_c3JkMeiF_U
 ###
 
 POST http://localhost:3333/courses
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmODgyZWM1Mi1jZThjLTQ5YjEtODk4Ni0yYTI5Yzk1N2E0YmMiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc1NjM0NjU2OX0.TTjQxBvoi-QAGnvVPH-ONqwIGGA7Rly0_c3JkMeiF_U
 
 {
-    "title": "Curso Teste Zod"
+    "title": "Curso Teste token"
+}
+
+###
+
+POST http://localhost:3333/login
+Content-Type: application/json
+
+{
+    "email": "Josie.Bernhard59@hotmail.com",
+    "password": "123456"
 }

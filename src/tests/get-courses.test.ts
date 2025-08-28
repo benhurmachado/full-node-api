@@ -4,6 +4,7 @@ import { server } from '../app.ts'
 import { faker } from '@faker-js/faker'
 import { makeCourse } from './factories/make-course.ts'
 import { randomUUID } from 'node:crypto'
+import { makeLogin } from './factories/make-login.ts'
 
 //Supertest faz as requests http
 
@@ -12,10 +13,12 @@ test("Get All Courses", async () => {
 
     const titleId = randomUUID()
 
+    const { token } = await makeLogin('manager')
     const course = await makeCourse(titleId)
 
     const response = await request(server.server)
     .get(`/courses?search=${titleId}`)
+    .set('Authorization', token)
 
     expect(response.status).toEqual(200)
     expect(response.body).toEqual({
